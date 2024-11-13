@@ -1,0 +1,8 @@
+{% extends "default.html" %}
+{% load custom_filters %}
+{% block title %}News Detail{% endblock %}
+{% block content %}
+   <h2>{{ post.title|censor }}</h2>
+   <p>{{ formatted_date }}</p>
+   <p>{{ post.content|censor }}</p>
+{% endblock %}
